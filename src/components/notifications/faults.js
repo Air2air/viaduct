@@ -1,6 +1,7 @@
 import React from "react";
-import { CardDeck, Card, Badge } from "react-bootstrap";
-import { motion } from "framer-motion";
+import { CardDeck, Card, Badge, Button } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
+//import { motion } from "framer-motion";
 
 function Faults() {
   const faults = [
@@ -32,22 +33,27 @@ function Faults() {
       category: "ISO-TP",
       count: 1,
       info: "Fuel and Air Metering",
-      code: "P0667",
+      code: "P0669",
       condition: "warning",
       color: "dark",
     },
   ];
   const faultsList = faults.map(
     ({ category, count, info, code, condition, color }) => (
-      <>
-        <Card key={code} bg={condition} text={color}>
-          <Card.Header>{category}</Card.Header>
+      <Card key={code} bg={condition} text={color}>
+        <Accordion>
+          <Accordion.Toggle as={Card.Header} eventKey="0">
+            {category}
+          </Accordion.Toggle>
           <Card.Body>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>Hello! I'm the body</Card.Body>
+            </Accordion.Collapse>
             <Card.Text>{info}</Card.Text>
           </Card.Body>
           <Card.Footer>{code}</Card.Footer>
-        </Card>
-      </>
+        </Accordion>
+      </Card>
     )
   );
 
@@ -55,14 +61,17 @@ function Faults() {
     <>
       <h2 className="pb-2" style={{ color: "gray" }}>
         Faults
-        <Badge variant="secondary" style={{ backgroundColor: "gray" }} className="ml-3">
+        <Badge
+          variant="secondary"
+          style={{ backgroundColor: "gray" }}
+          className="ml-3"
+        >
           4
         </Badge>
       </h2>
-      <CardDeck >{faultsList}</CardDeck>
+      <CardDeck>{faultsList}</CardDeck>
     </>
   );
 }
 
 export default Faults;
-

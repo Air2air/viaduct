@@ -12,7 +12,7 @@ function Reporting() {
       code: "RB67",
       condition: "primary",
       color: "light",
-      data: [4, 1, 1, 1, 4, 3, 0, 0, 2, 0, 5, 2, 0],
+      data: [4, 1, 1, 1, 4, 3, 0, 0, 2, 0, 5, 2, 8],
     },
     {
       category: "ISO-TP",
@@ -35,17 +35,17 @@ function Reporting() {
   ];
   const reportingList = reporting.map(
     ({ category, count, info, code, condition, color, data }) => (
-      <>
-        <Card key={code} bg={condition} text={color}>
-          <Card.Header>{category}
-          <Badge
-          variant={condition}
-          style={{ backgroundColor: "gray" }}
-          className="ml-3"
-        >
-          5
-        </Badge>
-          
+        <Card key={code}bg={condition} text={color}>
+          <Card.Header>
+            {category}
+            <Badge
+              pill
+              style={{ float: "right" }}
+              variant={condition}
+              className="ml-3"
+            >
+              {count} nodes
+            </Badge>
           </Card.Header>
           <Card.Body className="p-2">
             <div style={{ width: "100%" }}>
@@ -57,7 +57,6 @@ function Reporting() {
           </Card.Body>
           <Card.Footer>{code}</Card.Footer>
         </Card>
-      </>
     )
   );
 

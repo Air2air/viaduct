@@ -18,16 +18,17 @@ const Header = () => {
       delay: 2,
       duration:2
     }
-  },
+  }, 
 }}>
       <Container>
-        <Navbar className="py-3 justify-content-center">
+        <Navbar className="justify-content-center">
           <Navbar.Brand href="#">
             <Image src="../Viaduct_logo.svg" width={90} />
           </Navbar.Brand>
         </Navbar>
       </Container>
       </motion.div>
+      <br />
     </>
   );
 };
