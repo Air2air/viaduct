@@ -2,6 +2,9 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Switch, Route, NavLink, useLocation } from "react-router-dom";
 
+import About from "./pages/about";
+import Home from "./pages/home";
+
 function App() {
   const location = useLocation();
 
@@ -75,30 +78,6 @@ const pageStyle = {
   position: "absolute"
 };
 
-function About() {
-  return (
-    <motion.div
-      style={pageStyle}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
-    >
-      <h1>About</h1>
-      <p>
-        Let's animate transitions between React Router routes with Framer Motion
-      </p>
-      <h2>Framer Motion</h2>
-      <p>
-        Framer Motion is a great library for animations in React easily and
-        quickly.
-      </p>
-      <h2>React Router</h2>
-      <p>One of the most well known routers in the React ecosystem.</p>
-    </motion.div>
-  );
-}
 
 function Settings() {
   return (
@@ -170,22 +149,22 @@ function Settings() {
   );
 }
 
-function Home() {
-  return (
-    <motion.div
-      style={pageStyle}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
-    >
-      <h1>Home</h1>
-      <p>
-        Let's animate transitions between React Router routes with Framer Motion
-      </p>
-    </motion.div>
-  );
-}
+// function Home() {
+//   return (
+//     <motion.div
+//       style={pageStyle}
+//       initial="initial"
+//       animate="in"
+//       exit="out"
+//       variants={pageVariants}
+//       transition={pageTransition}
+//     >
+//       <h1>Home</h1>
+//       <p>
+//         Let's animate transitions between React Router routes with Framer Motion
+//       </p>
+//     </motion.div>
+//   );
+// }
 
 export default App;
