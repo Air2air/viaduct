@@ -46,7 +46,7 @@ const Header = () => {
                     color="gray"
                     className="mr-3"
                   />
-                  Mark Otto
+                  Todd Dunning
                 </Button>
               </motion.div>
             </Navbar.Text>

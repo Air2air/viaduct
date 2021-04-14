@@ -28,7 +28,7 @@ function App() {
               <NavLink
                 to="/"
                 exact
-                className="nav-link"
+                className="nav-link text-light"
                 activeStyle={{ color: "white", backgroundColor: "gray" }}
               >
                 Dashboard
@@ -37,7 +37,7 @@ function App() {
             <li className="nav-item">
               <NavLink
                 to="/about"
-                className="nav-link"
+                className="nav-link text-light"
                 activeStyle={{ color: "white", backgroundColor: "gray" }}
               >
                 About
@@ -47,7 +47,7 @@ function App() {
             <li className="nav-item">
               <NavLink
                 to="/settings"
-                className="nav-link"
+                className="nav-link text-light"
                 activeStyle={{ color: "white", backgroundColor: "gray" }}
               >
                 Settings

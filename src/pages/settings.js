@@ -41,6 +41,7 @@ function Settings() {
         exit="out"
         variants={pageVariants}
         transition={pageTransition}
+        className="text-white"
       >
         <div className="col-md-8">
           <h1>Settings</h1>

@@ -38,15 +38,11 @@ function About() {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
+      className="text-white"
     >
-      <h1>About</h1>
-      <p>Let's animate transitions between React Router routes with Viaduct</p>
-      <h2>Viaduct</h2>
-      <p>
-        Viaduct is a great library for animations in React easily and quickly.
-      </p>
-      <h2>React Router</h2>
-      <p>One of the most well known routers in the React ecosystem.</p>
+      <h1>About Viaduct</h1>
+      <p>FAQs and Docs to use the app, which we should not need if the designer is any good.</p>
+
     </motion.div>
   );
 }
