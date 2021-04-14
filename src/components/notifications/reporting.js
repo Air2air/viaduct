@@ -36,7 +36,16 @@ function Reporting() {
   ];
   const reportingList = reporting.map(
     ({ category, count, info, code, condition, color, data }) => (
-      <Card key={code} bg={condition} text={color}>
+      <Card
+        as={motion.div}
+        key={code}
+        whileHover={{
+          scale: 1.04,
+        }}
+        bg={condition}
+        text={color}
+        className="col-xs-4"
+      >
         <Card.Header>
           <b>{category}</b>
           <Badge
@@ -51,7 +60,10 @@ function Reporting() {
         <Card.Body className="p-2">
           <div style={{ width: "100%", opacity: 0.5 }}>
             <Sparklines data={data} width={100} height={20}>
-              <SparklinesLine color="#fff" style={{ fill: "none" }} />
+              <SparklinesLine
+                color="#fff"
+                style={{ fill: "none", strokeWidth: 1.4 }}
+              />
               <SparklinesSpots />
             </Sparklines>
           </div>

@@ -34,10 +34,21 @@ const Header = () => {
             </Navbar.Brand>
 
             <Navbar.Text className="justify-content-end">
-            <Button variant="light">
-              <FontAwesomeIcon icon={["fas", "user"]} size="2x" color="gray" />
-              <a href="#login">Mark Otto</a>
-              </Button>
+              <motion.div
+                whileHover={{
+                  scale: 1.04,
+                }}
+              >
+                <Button variant="dark" size="md">
+                  <FontAwesomeIcon
+                    icon={["fas", "user"]}
+                    size="1.5x"
+                    color="gray"
+                    className="mr-3"
+                  />
+                  Mark Otto
+                </Button>
+              </motion.div>
             </Navbar.Text>
           </Navbar>
         </Container>

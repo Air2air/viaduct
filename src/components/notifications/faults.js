@@ -57,7 +57,7 @@ function Faults() {
           </Accordion.Toggle>
           <Card.Body>
             <Accordion.Collapse eventKey={code}>
-              <Card.Body>Hello! I'm the body</Card.Body>
+              <Card.Body>Drilldown info</Card.Body>
             </Accordion.Collapse>
             <Card.Text>{info}</Card.Text>
           </Card.Body>
