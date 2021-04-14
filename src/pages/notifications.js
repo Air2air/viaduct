@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import NotificationItem from "./item";
+import NotificationItem from "./../components/notification-item";
 
 export default function Notifications() {
   const [notifications, setNotifications] = useState([]);
