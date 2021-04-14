@@ -35,13 +35,12 @@ function Settings() {
     return (
       <motion.div
         style={pageStyle}
-        className="row"
+        className="row text-white"
         initial="initial"
         animate="in"
         exit="out"
         variants={pageVariants}
         transition={pageTransition}
-        className="text-white"
       >
         <div className="col-md-8">
           <h1>Settings</h1>

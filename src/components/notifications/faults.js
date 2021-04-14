@@ -1,9 +1,8 @@
 import React from "react";
-import { CardDeck, Card, Badge, Button } from "react-bootstrap";
+import { CardDeck, Card, Badge } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-import { Sparklines, SparklinesSpots, SparklinesLine } from "react-sparklines";
+import { Sparklines, SparklinesLine } from "react-sparklines";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { motion } from "framer-motion";
 
 function Faults() {
   const faults = [
