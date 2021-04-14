@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { AnimatePresence } from "framer-motion";
 import { Switch, Route, NavLink, useLocation } from "react-router-dom";
 
@@ -6,11 +6,13 @@ import About from "./pages/about";
 import Home from "./pages/home";
 import Settings from "./pages/settings";
 
+
+
 function App() {
   const location = useLocation();
 
   return (
-    <div className="container-fluid bg-li ght" style={{ height: "100vh" }}>
+    <div className="container-fluid" style={{ height: "100vh" }}>
       <div className="row">
         <nav
           className="col-6 col-sm-4 col-md-2 bg-light py-5"
@@ -27,6 +29,7 @@ function App() {
                 About
               </NavLink>
             </li>
+
             <li className="nav-item">
               <NavLink to="/settings" className="nav-link">
                 Settings
@@ -50,6 +53,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
