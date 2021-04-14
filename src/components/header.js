@@ -15,15 +15,13 @@ const Header = () => {
     scale: 1,
     opacity: 1,
     transition: {
-      delay: .4
+      delay: 2,
+      duration:2
     }
   },
 }}>
-
-
-
       <Container>
-        <Navbar expand="lg" className="justify-content-center">
+        <Navbar className="py-3 justify-content-center">
           <Navbar.Brand href="#">
             <Image src="../Viaduct_logo.svg" width={90} />
           </Navbar.Brand>

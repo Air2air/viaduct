@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Notifications from "../components/cards/cardParent";
+import Faults from "../components/notifications/faults";
+import Reporting from "../components/notifications/reporting";
 
 const pageVariants = {
   initial: {
@@ -33,21 +34,18 @@ const pageStyle = {
 
 function Home() {
   return (
-      <motion.div
-        style={pageStyle}
-        initial="initial"
-        animate="in"
-        exit="out"
-        variants={pageVariants}
-        transition={pageTransition}
-      >
-        <Notifications />
-        <h1>Home new </h1>
-        <p>
-          Let's animate transitions between React Router routes with Framer
-          Motion
-        </p>
-      </motion.div>
+    <motion.div
+      style={pageStyle}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      <Faults />
+      <p></p><br />
+      <Reporting />
+    </motion.div>
   );
 }
 
