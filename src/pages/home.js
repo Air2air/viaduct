@@ -19,9 +19,8 @@ const pageVariants = {
       scale: 1.2
     }
   };
-  
 
-  
+
   const pageTransition = {
     type: "tween",
     ease: "anticipate",
