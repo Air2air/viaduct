@@ -1,11 +1,17 @@
 import * as React from "react";
 import { AnimatePresence } from "framer-motion";
 import { Switch, Route, NavLink, useLocation } from "react-router-dom";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
 import "./styles.css";
 
 import About from "./pages/about";
 import Home from "./pages/home";
 import Settings from "./pages/settings";
+
+library.add(fas);
 
 function App() {
   const location = useLocation();

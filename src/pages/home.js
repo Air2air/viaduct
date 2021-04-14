@@ -42,9 +42,9 @@ function Home() {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <Faults />
-      <p></p><br />
       <Reporting />
+      <br /><hr />
+      <Faults />
     </motion.div>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import { CardDeck, Card, Badge, Button } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import { Sparklines, SparklinesSpots, SparklinesLine } from "react-sparklines";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { motion } from "framer-motion";
 
 function Faults() {
@@ -40,26 +42,34 @@ function Faults() {
   ];
   const faultsList = faults.map(
     ({ category, count, info, code, condition, color }) => (
-      <Card key={code} bg={condition} text={color}>
-        <Accordion>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            {category}
+      <Accordion key={code}>
+        <Card bg={condition} text={color}>
+          <Accordion.Toggle
+            as={Card.Header}
+            eventKey={code}
+            style={{ cursor: "pointer" }}
+          >
+            <b>{category}</b>
+            <FontAwesomeIcon
+              icon={["fas", "chevron-down"]}
+              style={{ float: "right" }}
+            />
           </Accordion.Toggle>
           <Card.Body>
-            <Accordion.Collapse eventKey="0">
+            <Accordion.Collapse eventKey={code}>
               <Card.Body>Hello! I'm the body</Card.Body>
             </Accordion.Collapse>
             <Card.Text>{info}</Card.Text>
           </Card.Body>
           <Card.Footer>{code}</Card.Footer>
-        </Accordion>
-      </Card>
+        </Card>
+      </Accordion>
     )
   );
 
   return (
     <>
-      <h2 className="pb-2" style={{ color: "gray" }}>
+      <h2 className="pb-3" style={{ color: "gray" }}>
         Faults
         <Badge
           variant="secondary"
@@ -68,6 +78,14 @@ function Faults() {
         >
           4
         </Badge>
+        <div style={{ width: "80px", float: "right" }}>
+          <Sparklines data={[5, 1, 4, 3, 0, 2, 0 ]} width={80} height={14}>
+            <SparklinesLine
+              color="#999"
+              style={{ fill: "none", strokeWidth: 3 }}
+            />
+          </Sparklines>
+        </div>
       </h2>
       <CardDeck>{faultsList}</CardDeck>
     </>

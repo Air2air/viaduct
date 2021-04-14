@@ -1,6 +1,7 @@
 import React from "react";
 import { CardDeck, Card, Badge } from "react-bootstrap";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Sparklines, SparklinesSpots, SparklinesLine } from "react-sparklines";
 
 function Reporting() {
@@ -35,42 +36,56 @@ function Reporting() {
   ];
   const reportingList = reporting.map(
     ({ category, count, info, code, condition, color, data }) => (
-        <Card key={code}bg={condition} text={color}>
-          <Card.Header>
-            {category}
-            <Badge
-              pill
-              style={{ float: "right" }}
-              variant={condition}
-              className="ml-3"
-            >
-              {count} nodes
-            </Badge>
-          </Card.Header>
-          <Card.Body className="p-2">
-            <div style={{ width: "100%" }}>
-              <Sparklines data={data} width={100} height={20}>
-                <SparklinesLine color="#fff" style={{ fill: "none" }} />
-                <SparklinesSpots />
-              </Sparklines>
-            </div>
-          </Card.Body>
-          <Card.Footer>{code}</Card.Footer>
-        </Card>
+      <Card key={code} bg={condition} text={color}>
+        <Card.Header>
+          <b>{category}</b>
+          <Badge
+            pill
+            style={{ float: "right" }}
+            variant={condition}
+            className="ml-3"
+          >
+            {count} nodes
+          </Badge>
+        </Card.Header>
+        <Card.Body className="p-2">
+          <div style={{ width: "100%", opacity: 0.5 }}>
+            <Sparklines data={data} width={100} height={20}>
+              <SparklinesLine color="#fff" style={{ fill: "none" }} />
+              <SparklinesSpots />
+            </Sparklines>
+          </div>
+        </Card.Body>
+        <Card.Footer>
+          {code}
+          <FontAwesomeIcon
+            icon={["fas", "chevron-right"]}
+            style={{ float: "right" }}
+          />
+        </Card.Footer>
+      </Card>
     )
   );
 
   return (
     <>
       <h2 className="pb-2" style={{ color: "gray" }}>
-        Network{" "}
+        Network
         <Badge
           variant="secondary"
           style={{ backgroundColor: "gray" }}
           className="ml-3"
         >
-          5
+          3
         </Badge>
+        <div style={{ width: "80px", float: "right" }}>
+          <Sparklines data={[0, 2, 0, 5, 1, 4, 3]} width={80} height={14}>
+            <SparklinesLine
+              color="#999"
+              style={{ fill: "none", strokeWidth: 3 }}
+            />
+          </Sparklines>
+        </div>
       </h2>
       <CardDeck>{reportingList}</CardDeck>
     </>

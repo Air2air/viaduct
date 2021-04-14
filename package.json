@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "framer-motion": "^1.6.15",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -35,6 +37,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@tsconfig/recommended": "^1.0.1",
     "framer": "^1.2.29",
     "react-bootstrap": "^1.5.2"
