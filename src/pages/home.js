@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Faults from "../components/notifications/faults";
-import Reporting from "../components/notifications/reporting";
+import Faults from "../components/status/faults";
+import Reporting from "../components/status/reporting";
 
 const pageVariants = {
   initial: {

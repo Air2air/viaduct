@@ -46,7 +46,7 @@ const Header = () => {
                     color="gray"
                     className="mr-3"
                   />
-                  Todd Dunning
+                  John Pugliesi
                 </Button>
               </motion.div>
             </Navbar.Text>
