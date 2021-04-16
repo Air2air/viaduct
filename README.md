@@ -1,1 +1,1 @@
-![Screenshot](./../public/screen.png?raw=true "Title")
+![Screenshot](./public/screen.png?raw=true "Title")
