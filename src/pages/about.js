@@ -41,14 +41,15 @@ function About() {
       transition={pageTransition}
       className="text-white"
     >
-      <h1>My process</h1>
-      <p>I make an initial shot at sketching the app just for discussion. </p>
+      <h1>Making a highly successful app</h1>
+
+      <p>- I make an initial shot at sketching the app just for discussion. </p>
       <p>
-        I find skipping over the UI sketching tools and just building on a branch is the fastest
+        - I find skipping over the UI sketching tools and just building on a branch is the fastest
         way to iterate for the team.
       </p>
       <p>
-        I either create requirements or ask for them, then iterate prototypes
+        - I either create requirements or ask for them, then iterate prototypes
         ASAP for my manager.
       </p>
 
@@ -60,6 +61,7 @@ function About() {
       <p>User confusion kills the company</p>
       <p>The journey is paramount and very fragile</p>
       <p>Initial adoption rates absolutely crucial</p>
+      <p>Find the chokepoints quickly</p>
 
       <br />
       <hr />
@@ -77,15 +79,15 @@ function About() {
 
       <h4>Design Blowup view</h4>
       <p>Total fields required</p>
-      <p>What needs to be added to the API</p>
-      <p>What can be compressed in the reduction phase</p>
+      <p>What needs to be added to the API?</p>
+      <p>What can be compressed in the reduction phase?</p>
 
       <br />
       <hr />
       <br />
 
       <h4>Engagement incentive</h4>
-      <p>Why should I use this feature</p>
+      <p>Why should I use this feature?</p>
       <p>Am I completely clear about the negative impact of using this feature?</p>
 
       <br />
@@ -93,8 +95,8 @@ function About() {
       <br />
 
       <h4>Benchmarking metrics</h4>
-      <p>How am I doing compared to others</p>
-      <p>How are other benefitting and I am not</p>
+      <p>How am I doing compared to others?</p>
+      <p>How are others benefitting and I am not?</p>
 
       <br />
       <hr />
