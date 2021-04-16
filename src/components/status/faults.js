@@ -1,5 +1,5 @@
 import React from "react";
-import { CardDeck, Card } from "react-bootstrap";
+import { CardDeck, Card, Badge, Button } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -70,15 +70,15 @@ function Faults() {
     <>
       <h2 className="pb-3" style={{ color: "gray" }}>
         Faults
-        {/* <Button variant="info">
+        <Button variant="secondary" className="ml-3">
           <Badge
             variant="danger"
-            className="ml-3"
+            className="mr-3"
           >
             4
           </Badge>
           Fix Faults
-        </Button> */}
+        </Button>
         <div style={{ width: "80px", float: "right" }}>
           <Sparklines data={[5, 1, 4, 3, 0, 2, 0]} width={80} height={14}>
             <SparklinesLine

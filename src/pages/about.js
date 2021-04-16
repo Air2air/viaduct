@@ -67,9 +67,9 @@ function About() {
 
       <h4>Strategy high level</h4>
       <p>Goals definition and scope... is it a feature or a new journey?</p>
-      <p>If a feature where does it fit in the journey</p>
+      <p>If it's a feature where does it fit in the journey</p>
       <p>What does it solve and what user input is required</p>
-      <p>Negative impact on the user, and time consumption</p>
+      <p>How does it harm the user in time and effort impact?</p>
 
       <br />
       <hr />
@@ -84,12 +84,28 @@ function About() {
       <hr />
       <br />
 
+      <h4>Engagement incentive</h4>
+      <p>Why should I use this feature</p>
+      <p>Am I completely clear about the negative impact of using this feature?</p>
+
+      <br />
+      <hr />
+      <br />
+
+      <h4>Benchmarking metrics</h4>
+      <p>How am I doing compared to others</p>
+      <p>How are other benefitting and I am not</p>
+
+      <br />
+      <hr />
+      <br />
+
       <h4>Reduction phase</h4>
       <p>'One button' perfect world version</p>
       <p>How small can the feature be physically</p>
       <p>How much of the feature can be preprocessed in the back end</p>
       <p>How to reduce decision making by the user</p>
-      <p>Precalculation - How much can be done in the framework</p>
+      <p>Precalculation - How much can be done in the front end</p>
 
       <br />
       <hr />
